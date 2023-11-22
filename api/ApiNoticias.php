@@ -1,14 +1,15 @@
 <?php
 require_once "../repository/Db.php";
+require_once "../repository/NoticiasRepository.php";
 
 // Obtener la conexión
 $conexion = Db::conectar();
 
+// Crear una instancia de NoticiaRepository
+$noticiaRepository = new NoticiaRepository($conexion);
+
 // Obtener todas las noticias
-$query = "SELECT * FROM noticias";
-$stmt = $conexion->prepare($query);
-$stmt->execute();
-$noticias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$noticias = $noticiaRepository->getAllNoticias();
 
 // Cerrar la conexión
 $conexion = null;
@@ -17,17 +18,17 @@ $conexion = null;
 $arrayDeNoticias = [];
 foreach ($noticias as $noticia) {
     $arrayDeNoticias[] = [
-        'id' => $noticia['id'],
-        'fechaComienzo' => $noticia['fechaComienzo'],
-        'fechaFin' => $noticia['fechaFin'],
-        'duracion' => $noticia['duracion'],
-        'prioridad' => $noticia['prioridad'],
-        'titulo' => $noticia['titulo'],
-        'perfil' => $noticia['perfil'],
-        'tipo' => $noticia['tipo'],
-        'contenido' => $noticia['contenido'],
-        'url' => $noticia['url'],
-        'formato' => $noticia['formato']
+        'id' => $noticia->getId(),
+        'fechaComienzo' => $noticia->getFechaComienzo(),
+        'fechaFin' => $noticia->getFechaFin(),
+        'duracion' => $noticia->getDuracion(),
+        'prioridad' => $noticia->getPrioridad(),
+        'titulo' => $noticia->getTitulo(),
+        'perfil' => $noticia->getPerfil(),
+        'tipo' => $noticia->getTipo(),
+        'contenido' => $noticia->getContenido(),
+        'url' => $noticia->getUrl(),
+        'formato' => $noticia->getFormato()
     ];
 }
 
