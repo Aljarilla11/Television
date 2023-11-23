@@ -11,6 +11,9 @@
         <form action="forms/GestionarNoticias.php" method="post">
             <button id="enter-button" type="submit">Entrar</button>
         </form>
+        <form action="MostrarContenido/index.html" method="post">
+            <button id="enter-button" type="submit">Ver</button>
+        </form>
     </div>
 </body>
 </html>

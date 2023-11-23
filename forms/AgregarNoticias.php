@@ -120,12 +120,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["enviarFormulario"])) 
 
         <div id="urlImagen">
             <label for="urlImagenInput">URL de la Imagen (para tipo Imagen):</label>
-            <input type="url" name="urlImagenInput" id="urlImagenInput" placeholder="Ejemplo: https://ejemplo.com/imagen.jpg">
+            <input type="text" name="urlImagenInput" id="urlImagenInput" placeholder="Ejemplo: https://ejemplo.com/imagen.jpg">
         </div>
 
         <div id="urlVideo">
             <label for="urlVideoInput">URL del Video (para tipo Video):</label>
-            <input type="url" name="urlVideoInput" id="urlVideoInput" placeholder="Ejemplo: https://ejemplo.com/video.mp4">
+            <input type="text" name="urlVideoInput" id="urlVideoInput" placeholder="Ejemplo: https://ejemplo.com/video.mp4">
         </div>
 
         <div id="formatoVideo">

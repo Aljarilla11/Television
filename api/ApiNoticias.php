@@ -40,4 +40,4 @@ header('Content-Type: application/json');
 
 // Devolver la respuesta JSON
 echo $jsonResponse;
-?>s
+?>
