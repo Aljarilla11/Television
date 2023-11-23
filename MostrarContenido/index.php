@@ -1,3 +1,13 @@
+<?php
+
+class Noticias
+{
+    public static function carruselNoticias()
+    {
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js/LeerNoticia.js"></script>
-    <!-- <link rel="stylesheet" href="HacerExamen/estilos/estiloExamen.css"> -->
+    <link rel="stylesheet" href="../estilos/estiloPantalla.css">
 </head>
 <body>
     
@@ -13,6 +23,10 @@
 
 </div>
 
-<button id="comenzar">Comenzar</button>
 </body>
 </html>
+
+<?php
+    }
+}
+?>

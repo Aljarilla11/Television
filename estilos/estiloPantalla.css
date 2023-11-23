@@ -1,0 +1,15 @@
+.noticia {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.contenido {
+    /* Ajusta el contenido según sea necesario */
+    padding: 20px;
+    box-sizing: border-box;
+}
