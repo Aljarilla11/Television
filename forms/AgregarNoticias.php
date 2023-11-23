@@ -140,9 +140,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["enviarFormulario"])) 
 
         <label for="perfil">Perfil:</label>
         <select name="perfil" id="perfil" required>
-            <option value="Todos">Todos</option>
-            <option value="Alumno">Alumno</option>
-            <option value="Profesor">Profesor</option>
+            <option value="todos">Todos</option>
+            <option value="alumno">Alumno</option>
+            <option value="profesor">Profesor</option>
         </select>
 
         <button type="submit" name="enviarFormulario">Enviar</button>

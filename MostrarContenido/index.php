@@ -1,13 +1,3 @@
-<?php
-
-class Noticias
-{
-    public static function carruselNoticias()
-    {
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +15,3 @@ class Noticias
 
 </body>
 </html>
-
-<?php
-    }
-}
-?>
