@@ -62,12 +62,12 @@ $conexion = null;
 
 <div id="urlImagen" style="display: <?php echo ($noticia['tipo'] === 'Imagen') ? 'block' : 'none'; ?>">
     <label for="urlImagenInput">URL de la Imagen (para tipo Imagen):</label>
-    <input type="url" name="urlImagenInput" value="<?php echo $noticia['url']; ?>" placeholder="Ejemplo: https://ejemplo.com/imagen.jpg">
+    <input type="text" name="urlImagenInput" value="<?php echo $noticia['url']; ?>" placeholder="Ejemplo: https://ejemplo.com/imagen.jpg">
 </div>
 
 <div id="urlVideo" style="display: <?php echo ($noticia['tipo'] === 'Video') ? 'block' : 'none'; ?>">
     <label for="urlVideoInput">URL del Video (para tipo Video):</label>
-    <input type="url" name="urlVideoInput" value="<?php echo $noticia['url']; ?>" placeholder="Ejemplo: https://ejemplo.com/video.mp4">
+    <input type="text" name="urlVideoInput" value="<?php echo $noticia['url']; ?>" placeholder="Ejemplo: https://ejemplo.com/video.mp4">
 </div>
 
 <div id="formatoVideo" style="display: <?php echo ($noticia['tipo'] === 'Video') ? 'block' : 'none'; ?>">
