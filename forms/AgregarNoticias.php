@@ -14,13 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["enviarFormulario"])) 
     $contenido = isset($_POST["contenido"]) ? $_POST["contenido"] : null;
     $url = '';
     $formato = '';
-
-    if ($fechaInicio != null && $fechaFin != null){
-
-    // Convertir el formato de fecha
-    $fechaInicio = DateTime::createFromFormat('d/m/Y H:i:s', $fechaInicio)->format('Y-m-d H:i:s');
-    $fechaFin = DateTime::createFromFormat('d/m/Y H:i:s', $fechaFin)->format('Y-m-d H:i:s');
-    }
+    
     // Determinar los campos específicos según el tipo de contenido
     if ($tipoContenido === "Web") {
         $url = ''; // Para el tipo Web, no se necesita una URL adicional
@@ -94,11 +88,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["enviarFormulario"])) 
         <label for="titulo">Título:</label>
         <input type="text" name="titulo" id="titulo" placeholder="Ejemplo: Título de la Noticia" required>
 
-        <label for="fechaInicio">Fecha de Inicio (dd/mm/aaaa hh:mm:ss):</label>
-        <input type="text" name="fechaInicio" id="fechaInicio" placeholder="Ejemplo: 01/01/2023 12:00:00" required>
+        <label for="fechaInicio">Fecha de Inicio (aaaa-mm-dd):</label>
+        <input type="text" name="fechaInicio" id="fechaInicio" placeholder="Ejemplo: 2023-12-12" required>
 
-        <label for="fechaFin">Fecha de Fin (dd/mm/aaaa hh:mm:ss):</label>
-        <input type="text" name="fechaFin" id="fechaFin" placeholder="Ejemplo: 02/01/2023 14:30:00" required>
+        <label for="fechaFin">Fecha de Fin (aaaa-mm-dd):</label>
+        <input type="text" name="fechaFin" id="fechaFin" placeholder="Ejemplo: 2023-12-12" required>
 
         <label for="duracion">Duración (segundos):</label>
         <input type="number" name="duracion" id="duracion" placeholder="Ejemplo: 3600" required>

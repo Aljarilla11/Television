@@ -16,12 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $url = '';
     $formato = '';
 
-    if ($fechaInicio != null && $fechaFin != null){
-
-        // Convertir el formato de fecha
-        $fechaInicio = DateTime::createFromFormat('d/m/Y H:i:s', $fechaInicio)->format('Y-m-d H:i:s');
-        $fechaFin = DateTime::createFromFormat('d/m/Y H:i:s', $fechaFin)->format('Y-m-d H:i:s');
-        }
 
     // Determinar los campos específicos según el tipo de contenido
     if ($tipoContenido === "Web") {

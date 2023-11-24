@@ -56,6 +56,7 @@ window.addEventListener("load", function () {
 
         if (tipoContenido === "web") {
             contenidoAux.innerHTML = noticias[indexNoticiaActual].contenido;
+            contenidoAux.style.textAlign = "center";
         } else if (tipoContenido === "video") {
             contenidoAux.innerHTML = '<video id="video"src="' + noticias[indexNoticiaActual].url + '" controls autoplay></video>';
         } else if (tipoContenido === "imagen") {

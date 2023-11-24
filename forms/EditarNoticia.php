@@ -36,10 +36,10 @@ $conexion = null;
     <label for="titulo">Título:</label>
 <input type="text" name="titulo" value="<?php echo $noticia['titulo']; ?>" required>
 
-<label for="fechaInicio">Fecha de Inicio (dd/mm/aaaa hh:mm:ss):</label>
+<label for="fechaInicio">Fecha de Inicio (aaaa-mm-dd):</label>
 <input type="text" name="fechaInicio" value="<?php echo $noticia['fechaComienzo']; ?>" required>
 
-<label for="fechaFin">Fecha de Fin (dd/mm/aaaa hh:mm:ss):</label>
+<label for="fechaFin">Fecha de Fin (aaaa-mm-dd):</label>
 <input type="text" name="fechaFin" value="<?php echo $noticia['fechaFin']; ?>" required>
 
 <label for="duracion">Duración (segundos):</label>
