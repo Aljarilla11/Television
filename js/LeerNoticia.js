@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
             contenedor.innerHTML = y;
             divContenido.appendChild(contenedor);
 
-            fetch("http://gestiontelevisiones.com/api/ApiNoticias.php").then(x => x.json()).then(y => {
+            fetch("http://gestionartelevisiones.com/api/ApiNoticias.php").then(x => x.json()).then(y => {
                 // Duplicar noticias según la prioridad
                 noticias = duplicarNoticiasSegunPrioridad(y.noticias);
 
@@ -57,9 +57,9 @@ window.addEventListener("load", function () {
         if (tipoContenido === "web") {
             contenidoAux.innerHTML = noticias[indexNoticiaActual].contenido;
         } else if (tipoContenido === "video") {
-            contenidoAux.innerHTML = '<video src="' + noticias[indexNoticiaActual].url + '" controls autoplay></video>';
+            contenidoAux.innerHTML = '<video id="video"src="' + noticias[indexNoticiaActual].url + '" controls autoplay></video>';
         } else if (tipoContenido === "imagen") {
-            contenidoAux.innerHTML = '<img src="' + noticias[indexNoticiaActual].url + '" alt="Imagen de la noticia">';
+            contenidoAux.innerHTML = '<img id="imagen" src="' + noticias[indexNoticiaActual].url + '" alt="Imagen de la noticia">';
         }
 
         if (indexNoticiaActual !== 0) {

@@ -1,15 +1,18 @@
-.noticia {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+body{
+    overflow: hidden;
 }
 
-.contenido {
-    /* Ajusta el contenido según sea necesario */
-    padding: 20px;
-    box-sizing: border-box;
+#imagen{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#video{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
